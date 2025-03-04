@@ -24,10 +24,11 @@
     }
 
     .Login-form {
-        background-color: #FFFFFF;
+        /* background-clip: content-box; */
         /* border: 1px solid red; */
         align-items: center;
         width: 500px;
+        height: 600px;
         margin: auto;
     }
 
@@ -78,10 +79,12 @@
     }
 
     .form {
+        border-radius: 15px;
 
-        border-radius: 50px;
+        /* background-clip: content-box; */
+        background-color: #FFFFFF;
         padding: 30px;
-        background-color: #FFFFFF
+
     }
 
     button {
@@ -97,34 +100,50 @@
     .pass a {
         color: #007AFF;
         font-size: 24px;
+        font-family: Helvetica;
 
     }
 
     .account {
+        font-size: 24px;
         display: flex;
         gap: 4px;
     }
 
+
+
     .account a {
         color: #007AFF;
         font-size: 24px;
-        padding-top: 20px;
+
+        padding-top: 6%;
+        font-family: Helvetica;
+    }
+
+    input::placeholder {
+        font-family: Helvetica;
+
+        /* Làm đậm chữ */
+        color: rgb(6, 6, 6);
+        /* Màu chữ */
     }
 </style>
 
 <body>
+    <p id="header">Login</p>
     <div class="Login-form">
-
-        <p id="header">Login</p>
+        <!-- 
+        <p id="header">Login</p> -->
         <div class="form">
+
             <div class="Em-pa">
                 <label for="">Email</label>
-                <input type="text">
+                <input type="text" placeholder="Exam@gmail.com">
                 <div class="pass">
                     <label for="">Password</label>
                     <a>Forgot Password</a>
                 </div>
-                <input type="text">
+                <input type="password" placeholder="************">
             </div>
             <button><strong>Login</strong></button>
             <div class="account">
