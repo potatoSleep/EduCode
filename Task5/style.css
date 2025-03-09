@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'BeaufortforLOL', sans-serif;
+}
+@font-face {
+    font-family: 'BeaufortforLOL';
+    src: url('BeaufortforLOL-Bold.woff2') format('woff2'),
+        url('BeaufortforLOL-Bold.woff') format('woff'),
+        url('BeaufortforLOL-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+.container {
+    background-color: #ffffff;
+    margin: 100px auto 0;
+    width: 1440px;
+    height:3516px;
+    padding: 0;
+   
+    box-shadow: 0px 24px 28px 9px rgba(179, 193, 217, 0.33);
+    align-items: flex-start;
+    border-radius: 15px;
+}
+.img-header{
+    width: 1440px;
+        height: 825px;
+        
+}
+#lol{
+    width: 240px;
+    height: 105.79999542236328px;
+    margin: 32px 600px
+
+}
+
+.menu{
+margin: 0px 377px 62.2px 350px;;
+}
+ul {
+   
+    width: 713px;
+    height: 25px;
+    display: flex;
+    gap: 32px;
+}
+li {
+    width: Hug(77px);
+    height: 25px;
+    font-weight: bold;
+font-family: 'BeaufortforLOL', serif;
+   
+    margin: 0px;
+    font-size: 20px;
+    list-style: none;
+    color: #000000;
+    border-radius: 8px;
+}
+.card{
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+.card-info{
+    width: calc(100% / 4 - 32px);
+}
+
+.card-info img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 328px;
+    height: 370px;
+       
+}
+.card-info p {
+    background-color: rgba(14, 76, 103, 1);
+    width: 328px;
+    font-weight: bold;
+    height: 80px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'BeaufortforLOL', serif;
+}
+#img-foot{
+    flex-wrap: nowrap;
+    margin-bottom: 73px;
+    width: 1408px;
+        height: 792px;
+        
+
+}
+.footer{
+    background-color: rgba(14, 76, 103, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1440px;
+    height: 100px;
+
+      
+}
+.footer p{
+    color: #ffffff;
+
+}
+.footer button {
+    font-weight: bold;
+    background-color: rgba(255, 168, 0, 1);
+    width: 120px;
+    height: 52px;
+    border: none;
+ ;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.footer input {
+    background-color: rgba(14, 76, 103, 1);
+
+    border: 2px solid rgba(255, 168, 0, 1);
+
+    width: 278px;
+    height: 50px;
+    color: white;
+  
+    padding: 10px;
+    font-size: 16px;
+}
+
+.footer input::placeholder {
+    color: rgb(255, 255, 255) !important;
+    opacity: 1 !important;
+}
+.in-bt{
+    margin-right: 24px;
+    display: flex;
+    gap: 24px;
+}

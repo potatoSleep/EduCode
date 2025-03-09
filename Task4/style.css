@@ -69,7 +69,7 @@ ul{
 li{
     width: hug(121px);
     height: 56px;
-font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     padding: 16px ;
     margin: 0px;
     font-size: 16px;
@@ -77,10 +77,10 @@ font-family: 'Poppins', sans-serif;
     color:#44495B;
     border-radius: 8px;
 }
-li:hover{
-background-color:#849FFF ;
-color: #fff;
-}
+    li:hover{
+    background-color:#849FFF ;
+    color: #fff;
+    }
 
 .user-info {
     margin-top: 70px;
