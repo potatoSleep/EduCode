@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+.container{
+    background-color: #fff;
+    margin: 100px auto 0;
+    padding: 100px;
+    display: flex;
+    width: 1213px;
+    gap: 82px;
+    box-shadow: 0px 24px 28px 9px rgba(179, 193, 217, 0.33);
+    align-items: flex-start;
+    border-radius: 15px;
+}
+h1{
+    font-size: 32px;
+    color:#151B32;
+}
+.user-list{
+   
+}
+
+.menu{
+ 
+  display: flex;
+  justify-content: space-between;
+    
+
+}
+ul{
+    display: flex;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #A7C1E2;
+    border-radius: 4px;
+    padding: 8px 12px;
+    background: white;
+    width: 100%;
+    max-width: 300px;
+ gap: 8px;
+    /* Làm gốc để định vị icon */
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex: 1;
+   
+    /* Để chừa khoảng trống cho icon */
+}
+
+.search-box svg {
+    width: 20px;
+    height: 20px;
+    color: #555;
+    margin-left: 10px;
+}
+
+li{
+    width: hug(121px);
+    height: 56px;
+font-family: 'Poppins', sans-serif;
+    padding: 16px ;
+    margin: 0px;
+    font-size: 16px;
+    list-style: none;
+    color:#44495B;
+    border-radius: 8px;
+}
+li:hover{
+background-color:#849FFF ;
+color: #fff;
+}
+
+.user-info {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.box{
+    background-color: #FBFCFF;
+    padding: 24px;
+    width: calc(100% / 3 - 13px);
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    border-radius: 16px;
+}
+.box:hover{
+    border: 1px solid #99BFEA;
+    box-shadow:0px 7px 29px rgba(218, 224, 249, 0.7);
+    
+}
+img{
+    width: 97px;
+        height: 97px;
+        border-radius: 50px;
+       
+}
+.box p{
+    font-size: 18px;
+}
+.box span{
+    font-size:14px ;
+}
+.text{
+
+    height: 132px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+padding-top: 20px;
+}
+.tag span{
+    color: #849FFF;
+    border: 1px solid #BFC8E5;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+.tag{
+
+margin-top: 16px;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
