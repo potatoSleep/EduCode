@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  background-color: rgba(230, 230, 228, 1);
+  margin: 100px auto 0;
+  width: 1512px;
+  height: 1708px;
+  padding: 0;
+
+  box-shadow: 0px 24px 28px 9px rgba(179, 193, 217, 0.33);
+  align-items: flex-start;
+  border-radius: 15px;
+}
+.menu {
+  padding: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+.menu span {
+  color: rgba(31, 29, 42, 1);
+  font-size: 32px;
+}
+ul {
+  display: flex;
+  gap: 52px;
+}
+li {
+  color: rgba(31, 29, 42, 1);
+  font-size: 16px;
+  list-style-type: none;
+  position: relative;
+  padding: 12px;
+}
+li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 100px;
+}
+li:hover::after {
+  width: 100%;
+  transition: ease-in-out 0.5s;
+}
+
+.menu button {
+  width: 110px;
+  height: 45px;
+  border-radius: 6px;
+  border: 1px solid rgba(31, 29, 42, 1);
+  color: rgba(31, 29, 42, 1);
+}
+.get-start {
+  margin: 120px auto 0;
+  width: 1200px;
+  height: 531px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+.text h1 {
+  font-size: 55px;
+  width: 579px;
+  height: 166px;
+}
+.text p {
+  font-size: 16px;
+  color: rgba(155, 148, 142, 1);
+}
+.text button {
+  background-color: rgba(150, 198, 127, 1);
+  width: 170px;
+  height: 70px;
+  border-radius: 6px;
+  border: 0;
+  margin-top: 50px;
+}
+.image {
+  position: relative;
+}
+.image img {
+  border-radius: 50%;
+}
+#next {
+  position: relative;
+  top: -300px;
+  left: 85%;
+}
+.rate {
+  position: relative;
+  top: -201px;
+  left: 30px;
+  width: 180px;
+  height: 130px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+}
+.intr {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.rate span {
+  font-size: 16px;
+}
+.rate p {
+  font-size: 14px;
+  color: #9b948e;
+}
+.start {
+  margin-top: 19px;
+}
+.companies {
+  width: 763px;
+  height: 84px;
+  margin: 0px 378px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.companies p {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+.companies-img {
+  display: flex;
+  gap: 60px;
+}
+.career {
+  text-align: center;
+  margin: 100px 616px 74px 616px;
+}
+.career p {
+  font-size: 18px;
+}
+.career h1 {
+  font-size: 32px;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.career h1 span::after {
+  content: "";
+  position: absolute;
+  left: 61%;
+  bottom: 4px;
+  width: 40%;
+  height: 7px;
+  background-color: #96c67f;
+  z-index: -1;
+}
+
+.mana-box {
+  margin: 0px auto;
+  width: 1200px;
+  display: flex;
+  gap: 30px;
+}
+
+.box {
+  border-radius: 10px;
+  background-color: #fbfcff;
+  width: calc(100% / 4 - 30px);
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.box img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 270px;
+  height: 350px;
+  object-fit: cover;
+}
+.box span {
+  width: 69px;
+  height: 30px;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+.box p {
+  width: px;
+  height: 24px;
+  font-size: 16px;
+  color: #9b948e;
+}
+#text {
+  position: relative;
+  top: 10px;
+  left: 20px;
+
+  width: 295px;
+  height: 70px;
+  gap: 6px;
+}
