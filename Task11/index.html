@@ -7,20 +7,13 @@
     <title>Task 11</title>
     <script>
         function isTriangle(a, b, c) {
-            let sum1 = a + b
-            let sum2 = a + c
-            let sum3 = b + c
             console.log(a, b, c);
 
-            if (sum1 < c || sum1 == c) {
-                return false
-            } else return true
-            if (sum2 < b || sum2 == b) {
-                return false
-            } else return true
-            if (sum3 < a || sum3 == a) {
-                return false
-            } else return true
+            if (a + b > c && a + c > b && b + c > a) {
+                return true;
+            } else {
+                return false;
+            }
         }
 
         // Test cases:
