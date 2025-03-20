@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+    <script>
+        function caclBMI(weight, height) {
+            let BMI = weight / (height * height)
+            BMI = +BMI.toFixed(2)
+
+            switch (true) {
+                case (BMI < 18.5):
+                    console.log(`${BMI} Thieu can`);
+                    break;
+                case (BMI >= 18.5 && BMI < 23):
+                    console.log(`${BMI} Binh Thuong`);
+                    break;
+                case (BMI >= 23 && BMI < 25):
+                    console.log(`${BMI} Thua Can`);
+                    break;
+                default:
+                    console.log(`${BMI} Beo`);
+            }
+
+        }
+
+        let h = parseFloat(prompt("Moi nhap chieu cao (m) (VD:1.75m)"))
+        let w = parseFloat(prompt("Moi nhap can nang "))
+        caclBMI(w, h)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
