@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 11</title>
+    <script>
+        function isTriangle(a, b, c) {
+            let sum1 = a + b
+            let sum2 = a + c
+            let sum3 = b + c
+            console.log(a, b, c);
+
+            if (sum1 < c || sum1 == c) {
+                return false
+            } else return true
+            if (sum2 < b || sum2 == b) {
+                return false
+            } else return true
+            if (sum3 < a || sum3 == a) {
+                return false
+            } else return true
+        }
+
+        // Test cases:
+        let n1 = parseFloat(prompt("Nhap so thu 1"))
+        let n2 = parseFloat(prompt("Nhap so thu 2"))
+        let n3 = parseFloat(prompt("Nhap so thu 3"))
+        console.log(isTriangle(n1, n2, n3))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

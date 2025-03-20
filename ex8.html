@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+
+        }
+
+        body {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "sidebar main main2"
+                "footer footer footer"
+            ;
+            gap: 20px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: aquamarine;
+
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: rgb(169, 107, 31);
+        }
+
+        .sidebar2 {
+            grid-area: main2;
+
+            background-color: rgb(89, 0, 133);
+        }
+
+        main {
+            grid-area: main;
+            background-color: rgb(47, 199, 149);
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: rgb(117, 209, 26);
+        }
+    </style>
+</head>
+
+<body>
+    <header>header</header>
+    <div class="sidebar">sidebar</div>
+    <main>
+        <h1>Danh sach san pham</h1>
+        <div class="product-list">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </main>
+    <div class="sidebar2">sidebar</div>
+    <footer>footer</footer>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10</title>
+    <script>
+        // Input:
+        function sortNumber(a, b, c) {
+            if (a > b && a > c && b > c) {
+                console.log(c, b, a);
+            } if (a > b && a > c && c > b) {
+                console.log(b, c, a);
+            }
+            if (b > a && b > c && c > a) {
+                console.log(a, c, b);
+
+            }
+            if (b > a && b > c && a > c) {
+                console.log(c, a, b);
+
+            }
+            if (c > a && c > b && a > b) {
+                console.log(b, a, c);
+
+            }
+            if (c > a && c > b && a < b) {
+                console.log(a, b, c);
+
+            }
+
+        }
+        let n1 = parseFloat(prompt("Nhap so thu 1"))
+        let n2 = parseFloat(prompt("Nhap so thu 2"))
+        let n3 = parseFloat(prompt("Nhap so thu 3"))
+        // Output:
+        sortNumber(n1, n2, n3); // 1 2 3
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
