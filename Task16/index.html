@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function taxiBill(km) {
+            // Ép kiểu sang số và kiểm tra hợp lệ
+            km = Number(km);
+            if (isNaN(km) || km <= 0) {
+                console.log("Số km không hợp lệ");
+                return;
+            }
+
+            let cost = 0;
+
+            if (km <= 1) {
+                cost = 10000;  // Giá mở cửa
+            } else if (km <= 30) {
+                cost = 10000 + (km - 1) * 8000;
+            } else {
+                cost = 10000 + 29 * 8000 + (km - 30) * 7000;
+            }
+
+            console.log(`Số tiền cần trả: ${cost}đ`);
+        }
+
+        // Kiểm thử lại với các giá trị đầu vào
+        taxiBill(0.1);  // Số tiền cần trả: 10,000đ
+        taxiBill(1);    // Số tiền cần trả: 10,000đ
+        taxiBill(10);   // Số tiền cần trả: 82,000đ
+        taxiBill(35);   // Số tiền cần trả: 255,000đ
+        taxiBill(46);   // Số tiền cần trả: 305,000đ
+        taxiBill(-5);   // Số km không hợp lệ
+        taxiBill("abc"); // Số km không hợp lệ
+    </script>
+    <title>Taxi Fare Calculation</title>
+</head>
+
+<body>
+</body>
+
+</html>

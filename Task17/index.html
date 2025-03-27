@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        let income = window.prompt("Nhập thu nhập của bạn (VNĐ):");
+
+        if (isNaN(income) || income < 0) {
+            console.log("Thu nhập không hợp lệ");
+        } else {
+            console.log("số thu nhập là" + " " + income);
+
+        }
+
+        // Input:
+        function taxSalary(salary) {
+            if (salary <= 11000000) {
+                console.log("Thuế thu nhập cá nhân phải nộp là: " + 0 + " VNĐ");
+            } else if (salary > 11000000 && salary <= 25000000) {
+                console.log("Thuế thu nhập cá nhân phải nộp là: " + salary * 0.05 + " VNĐ");
+            } else if (salary > 25000000 && salary <= 50000000) {
+                console.log("Thuế thu nhập cá nhân phải nộp là: " + salary * 0.1 + " VNĐ");
+            } else if (salary > 50000000 && salary <= 80000000) {
+                console.log("Thuế thu nhập cá nhân phải nộp là: " + salary * 0.2 + " VNĐ");
+
+            } else if (salary > 80000000) {
+                console.log("Thuế thu nhập cá nhân phải nộp là: " + salary * 0.3 + " VNĐ");
+            } else {
+                console.log("Thu nhập không hợp lệ");
+            }
+        }
+        // Output:
+        taxSalary(income);
+
+    </script>
+    <title>Task17</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
