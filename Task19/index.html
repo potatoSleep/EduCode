@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        let cha = prompt("Nhập kí tự: ");
+        let h = prompt("Nhập số dòng: ");
+        printIsoscelesTriangle(h, cha);
+        function printIsoscelesTriangle(n, character) {
+            for (i = 0; i < n; i++) {
+                let space = " ".repeat(n - i - 1);
+                let start = character.repeat(2 * i + 1);
+                console.log(space + start);
+            }
+        }
+
+        // Test
+        // Output:
+
+        //     *
+        //    ***
+        //   *****
+        //  *******
+        // *********
+    </script>
+    <title>Task 19</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
