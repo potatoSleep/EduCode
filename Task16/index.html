@@ -26,16 +26,10 @@
             console.log(`Số tiền cần trả: ${cost}đ`);
         }
 
-        // Kiểm thử lại với các giá trị đầu vào
-        taxiBill(0.1);  // Số tiền cần trả: 10,000đ
-        taxiBill(1);    // Số tiền cần trả: 10,000đ
-        taxiBill(10);   // Số tiền cần trả: 82,000đ
-        taxiBill(35);   // Số tiền cần trả: 255,000đ
-        taxiBill(46);   // Số tiền cần trả: 305,000đ
-        taxiBill(-5);   // Số km không hợp lệ
-        taxiBill("abc"); // Số km không hợp lệ
+        let km = prompt("Nhập số km đi được: ");
+        taxiBill(km);
     </script>
-    <title>Taxi Fare Calculation</title>
+    <title>Task 16</title>
 </head>
 
 <body>
