@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task20
+    </title>
+</head>
+<script>
+    function printChristmasTree(n, character) {
+        if (n > 1 && n <= 10) {
+            console.log("Số ký tự bạn nhập là: " + n);
+            console.log("Ký tự bạn nhập là: " + character);
+
+
+        } else {
+            console.log("n phải là số dương nhỏ hơn 10.");
+            return;
+        }
+        for (let i = 0; i < n; i++) {
+            let spaces = ' '.repeat(n - i - 1);
+            let stars = character.repeat(2 * i + 1);
+            console.log(spaces + stars);
+
+        }
+        let spaces = ' '.repeat(n - 1);
+        console.log(spaces + character);
+
+    }
+    let Numbers = prompt("Nhập số nhỏ hơn 10: ")
+    let character = String(prompt("Nhập 1 ký tự: "))
+    printChristmasTree(Numbers, character)
+</script>
+
+<body>
+
+</body>
+
+</html>
