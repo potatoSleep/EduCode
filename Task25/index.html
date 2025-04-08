@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 25</title>
+    <script>
+        function removeDuplicate(arr) {
+            let newArr = [];
+
+            for (let i = 0; i < arr.length; i++) {
+                let value = arr[i];
+
+                // Trường hợp là NaN
+                if (typeof value === 'number' && isNaN(value)) {
+                    let hasNaN = newArr.some(item => typeof item === 'number' && isNaN(item));
+                    if (!hasNaN) {
+                        newArr.push(value);
+                    }
+                }
+                // Các giá trị khác
+                else if (!newArr.includes(value)) {
+                    newArr.push(value);
+                }
+            }
+
+            return newArr;
+        }
+        const fruits = [
+            "apple",
+            "banana",
+            "kiwi",
+            "kiwi",
+            "banana",
+            "orange",
+            "apple",
+            "kiwi",
+        ];
+        console.log(fruits);
+
+        console.log(removeDuplicate(fruits));
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

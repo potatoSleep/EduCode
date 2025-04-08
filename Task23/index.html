@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 23</title>
+    <script>
+        function reverseArr(arr) {
+            // Tạo mảng mới chứa các giá trị là số hợp lệ
+            let validNumbers = [];
+            for (let i = 0; i < arr.length; i++) {
+                let item = arr[i];
+                if (typeof item === 'number' && !isNaN(item)) {
+                    validNumbers.push(item);
+                }
+            }
+
+            // Tạo mảng mới để chứa các số sau khi đảo ngược
+            let reversed = [];
+            for (let i = validNumbers.length - 1; i >= 0; i--) {
+                reversed.push(validNumbers[i]);
+            }
+
+            return reversed;
+        }
+        const arrNumber = [1, 2, 3, 4, 5, 5, 6];
+        console.log("Mang cu " + arrNumber);
+        console.log(reverseArr(arrNumber));
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 26</title>
+    <script>
+        function countElement(arr) {
+            let count = {}; // Tạo object để lưu số lần xuất hiện
+
+            for (let i = 0; i < arr.length; i++) {
+                let item = arr[i];
+
+                if (count[item]) {
+                    count[item]++; // Nếu đã có → tăng thêm 1
+                } else {
+                    count[item] = 1; // Nếu chưa có → bắt đầu từ 1
+                }
+            }
+
+            return count;
+        }
+        const fruits = [
+            "apple",
+            "banana",
+            "kiwi",
+            "kiwi",
+            "banana",
+            "orange",
+            "apple",
+            "kiwi",
+        ];
+
+        console.log(fruits);
+
+        console.log(countElement(fruits));
+        // 👉 { apple: 2, banana: 2, kiwi: 3, orange: 1 }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
