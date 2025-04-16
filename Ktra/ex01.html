@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex01</title>
+    <script>
+        const listCharacters =
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        function generatorId(length, prefix) {
+            // Xử lý và return về kết quả
+            if (!isNaN(length) > 0 && length < 100) {
+                let result = ""
+                let count = 1
+                for (i = 0; i < length.length; i++) {
+                    if (length[i] === length[i + 1]) {
+                        count++
+                    } else {
+                        result += count + length[i]
+                    }
+                }
+                return result
+            }
+        }
+        console.log(generatorId(8, "user"));
+    </script>
+</head>
+
+<body>
+    <div>Viết hàm tạo ra id ngẫu nhiên với yêu cầu sau</div>
+</body>
+
+</html>
