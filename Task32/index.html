@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task32</title>
+    <script>const arrayString = ["JavaScript", "java", "Python", "Ruby", ["PHP", ["Hehe"]]];
+        let keyWord = "ja";
+        function filterByKeyword(arrayString, keyWord) {
+            const flatArr = arrayString.flat(Infinity);
+            return flatArr.filter((item) =>
+                item.toLowerCase().includes(keyWord.toLowerCase())
+            );
+        }
+        console.log(filterByKeyword(arrayString, keyWord)); //["JavaScript", "java"]
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

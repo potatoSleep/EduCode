@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task31</title>
+    <Script>
+        const arrayWords = [
+            "Hello world",
+            "JS is fun",
+            "Arrays and strings",
+            "Java",
+            "PHP",
+            "Python",
+        ];
+
+        function countTotalWords(arr) {
+            return arr.reduce((sum, str) => sum + str.split(" ").length, 0);
+        }
+
+        console.log(countTotalWords(arrayWords));
+
+    </Script>
+</head>
+
+<body>
+
+</body>
+
+</html>
