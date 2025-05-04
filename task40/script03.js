@@ -26,29 +26,12 @@ function getProductDetailsAsync(productId, productName) {
 }
 
 async function run() {
-  try {
-    const user = await getUserAsync(1);
-    console.log("user:", user);
-
-    const purchases = await getPurchasesAsync(user.id);
-    console.log("purchases", purchases);
-
-    let total = 0;
-
-    for (const item of purchases) {
-      const productDetails = await getProductDetailsAsync(
-        item.id,
-        item.product
-      );
-      console.log("Chi tiết:", productDetails);
-
-      total += productDetails.price;
-    }
-
-    console.log("Tổng tiền:", total);
-  } catch (err) {
-    console.log(err);
-  }
+  const user = await getUserAsync(1);
+  const purchases = await getPurchasesAsync(user.id);
+  const productDetails = await Promise.all(
+    purchases.map((p) => getProductDetailsAsync(p.id, p.product))
+  );
+  const total = productDetails.reduce((sum, p) => sum + p.price, 0);
+  console.log("Tổng tiền:", total);
 }
-
 run();
