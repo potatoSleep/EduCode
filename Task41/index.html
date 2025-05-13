@@ -1,155 +1,11 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo App</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #e0e7ff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .todo-container {
-            background-color: #f8fafc;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 500px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #1f2937;
-            margin-bottom: 20px;
-        }
-
-        .input-section {
-            margin-bottom: 20px;
-        }
-
-        .input-group {
-            display: flex;
-            gap: 10px;
-        }
-
-        #todoInput {
-            flex: 1;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #d1d5db;
-            border-radius: 5px;
-        }
-
-        button {
-            padding: 10px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: #3b82f6;
-            color: #ffffff;
-        }
-
-        button:hover {
-            background-color: #2563eb;
-        }
-
-        .filter-section {
-            margin-bottom: 20px;
-            display: flex;
-            gap: 10px;
-        }
-
-        .filter-section button {
-            background-color: #e5e7eb;
-            color: #1f2937;
-        }
-
-        .filter-section button.active {
-            background-color: #3b82f6;
-            color: white;
-        }
-
-        .todo-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .todo-item {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            background-color: #ffffff;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #d1d5db;
-        }
-
-        .todo-item.completed span.task-text {
-            text-decoration: line-through;
-            color: #6b7280;
-        }
-
-        .todo-item span.task-text {
-            flex: 1;
-            font-size: 16px;
-            color: #1f2937;
-        }
-
-        .todo-item .status {
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-right: 10px;
-            cursor: pointer;
-        }
-
-        .status.completed {
-            background-color: #10b981;
-            color: #fff;
-        }
-
-        .status.active {
-            background-color: #f59e0b;
-            color: #fff;
-        }
-
-        .todo-item button {
-            margin-left: 5px;
-        }
-
-        .todo-item button.edit {
-            background-color: #8b5cf6;
-        }
-
-        .todo-item button.edit:hover {
-            background-color: #7c3aed;
-        }
-
-        .todo-item button.delete {
-            background-color: #ef4444;
-        }
-
-        .todo-item button.delete:hover {
-            background-color: #dc2626;
-        }
-
-        .error-message {
-            color: #dc2626;
-            font-size: 14px;
-            margin-top: 5px;
-            display: none;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -158,119 +14,22 @@
         <div class="input-section">
             <div class="input-group">
                 <input type="text" id="todoInput" placeholder="Nhập công việc mới..." />
-                <button onclick="addTodo()">Thêm</button>
+                <button id="actionButton" onclick="addTodo()">Thêm</button>
+                <button id="reset" onclick="reset()">Reset</button>
             </div>
             <div id="errorMessage" class="error-message">Vui lòng nhập công việc!</div>
         </div>
-
         <div class="filter-section">
             <button onclick="filterTodos('all')" class="active">Tất cả</button>
             <button onclick="filterTodos('active')">Chưa hoàn thành</button>
             <button onclick="filterTodos('completed')">Hoàn thành</button>
         </div>
+        <ul class="todo-list" id="todoList">
 
-        <ul id="todoList" class="todo-list"></ul>
+        </ul>
     </div>
-
-    <script>
-        let todos = JSON.parse(localStorage.getItem("todos")) || [];
-        let currentFilter = 'all';
-
-        function renderTodos() {
-            const todoList = document.getElementById("todoList");
-            todoList.innerHTML = "";
-
-            let filtered = todos;
-            if (currentFilter === 'active') {
-                filtered = todos.filter(todo => !todo.completed);
-            } else if (currentFilter === 'completed') {
-                filtered = todos.filter(todo => todo.completed);
-            }
-
-            filtered.forEach(todo => {
-                const li = document.createElement("li");
-                li.className = `todo-item ${todo.completed ? "completed" : ""}`;
-
-                li.innerHTML = `
-          <span class="task-text">${todo.text}</span>
-          <span class="status ${todo.completed ? "completed" : "active"}" onclick="toggleStatus(${todo.id})">
-            ${todo.completed ? "Hoàn thành" : "Chưa hoàn thành"}
-          </span>
-          <button class="edit" onclick="editTodo(${todo.id})">Sửa</button>
-          <button class="delete" onclick="deleteTodo(${todo.id})">Xóa</button>
-        `;
-
-                todoList.appendChild(li);
-            });
-        }
-
-        function saveTodos() {
-            localStorage.setItem("todos", JSON.stringify(todos));
-        }
-
-        function addTodo() {
-            const input = document.getElementById("todoInput");
-            const error = document.getElementById("errorMessage");
-            const text = input.value.trim();
-
-            if (text === "") {
-                error.style.display = "block";
-                return;
-            }
-
-            error.style.display = "none";
-
-            const newTodo = {
-                id: Date.now(),
-                text,
-                completed: false
-            };
-
-            todos.push(newTodo);
-            saveTodos();
-            renderTodos();
-            input.value = "";
-        }
-
-        function toggleStatus(id) {
-            const todo = todos.find(t => t.id === id);
-            if (todo) {
-                todo.completed = !todo.completed;
-                saveTodos();
-                renderTodos();
-            }
-        }
-
-        function deleteTodo(id) {
-            todos = todos.filter(t => t.id !== id);
-            saveTodos();
-            renderTodos();
-        }
-
-        function editTodo(id) {
-            const todo = todos.find(t => t.id === id);
-            const newText = prompt("Sửa công việc:", todo.text);
-            if (newText !== null && newText.trim() !== "") {
-                todo.text = newText.trim();
-                saveTodos();
-                renderTodos();
-            }
-        }
-
-        function filterTodos(status) {
-            currentFilter = status;
-            document.querySelectorAll('.filter-section button').forEach(btn => btn.classList.remove("active"));
-            document.querySelectorAll('.filter-section button').forEach(btn => {
-                if (btn.textContent.toLowerCase().includes(status === 'all' ? 'tất cả' : status)) {
-                    btn.classList.add("active");
-                }
-            });
-            renderTodos();
-        }
-
-        // Khởi tạo
-        renderTodos();
-    </script>
+    </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>
